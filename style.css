@@ -1,0 +1,694 @@
+
+      html{
+         scroll-behavior: smooth;
+      }
+*{
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+body{
+   background-image: linear-gradient(-55deg, #8e2de2 0%, #190725 30%,  #000000 100%);  
+  font-family: 'Open Sans';
+
+}
+.menu .list-serv li{
+  display: inline-block;
+  padding-left: 55px;
+  font-weight: 100;
+  font-size: 16px;
+}
+.menu .list-serv li a{
+  color: #fff;
+}
+
+.menu amp-img{
+ width: 133px;
+height: 50px;
+
+}
+
+.menu{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction: row;
+ flex-wrap: wrap;
+ height: 55px;
+ margin-left: auto;
+ z-index: 100;
+ margin-right: auto;
+ 
+
+}
+
+
+.back-inicio{
+  height: 93vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: auto;
+ margin-right: auto;
+
+}
+.back1{
+
+   background-image: url(img/morado.png);
+ background-position: center no-repeat;
+  height: 105vh;
+}
+
+.hero-text{
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: #0dab76;
+}
+.cambiante{
+  background-color: #f9d43a;
+  color: #000;
+  padding:0 8px 0 8px;
+}
+.box-text{
+  width: 55%;
+  z-index: 100;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.box h1, .box h2{
+color: #000;
+margin-top: 15px;
+font-weight: bold;
+font-size: 32px;
+text-align: center;
+position: absolute;
+left: 0;
+bottom: 5px;
+}
+.box h1{
+
+}
+.box amp-img{
+ width: 350px;
+}
+.hero-sub{
+  max-width: 75%;
+  color: #fff;
+  font-weight: 100;
+  font-size:3vh;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+.nave amp-img{
+  max-width: 950px;
+  max-height:950px;
+}
+
+.nave{  
+  width: 45%;
+  animation: 5s nave;
+  position: relative;
+  z-index: 3;
+
+}
+
+
+
+.clouduno {
+position: absolute;
+background-image: url(img/waves.png);
+background-size:cover;
+width: 650px;
+height: 650px;
+overflow:visible;
+opacity: .6;
+  background-position: center no-repeat;
+  animation-name: nave;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.clouddos {
+position: absolute;
+background-image: url(img/waves2.png);
+background-size:cover;
+width: 650px;
+height: 650px;
+
+opacity: .4;
+  background-position: center no-repeat;
+  animation-name: nave;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.cloudtres {
+position: absolute;
+background-image: url(img/waves3.png);
+background-size:cover;
+width: 650px;
+height: 650px;
+overflow:visible;
+opacity: .7;
+  background-position: center no-repeat;
+  animation-name: nave;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.more{
+  width: 99.8%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.hero-tres{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+   font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size:7vh;
+  color: #fff;
+}
+
+.algunos{
+  height: 100vh;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: nowrap;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+.algunos .box{
+  background-color: #ffffff;
+ border-radius: 15px;
+height: 50vh;
+ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  position: relative;
+  
+}
+.box h1{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align:center;
+}
+.algunos .a{
+width: 48%;}
+
+.algunos .b{
+  width: 23%;
+}
+footer{
+  width: 100%;
+  height: 150px;
+  background-color: #000;
+}
+input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+   background-color: #ffffff;
+ border-radius: 11px;
+border: none;
+ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.enviar {
+  background-color:#0dab76;
+  border-radius: 11px;
+  font-size:18px;
+  padding: 9px 5px;
+  width: 25%;
+  border:none;color:#03254e;
+  margin-left: 10px;
+  color: #000;
+  font-weight: 100;
+  cursor:pointer;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.form-inline{
+  display: flex;
+}
+
+
+.estrellas{
+position: absolute;
+display: flex;
+justify-content: center;
+align-items:center;
+  top: 0;
+  left: 0;   
+}
+.nube{
+ position: absolute;
+   width: 2402px;
+  height: 1351px;
+  background-image: url("img/nube.png") ;
+  background-position: center no-repeat;
+  animation-name: nubecitas;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+}
+.nubedos{
+   background-image: url("img/nube2.png") ;
+    position: absolute;
+    width: 2402px;
+  height: 1351px;
+  background-position: center no-repeat;
+  animation-name: nubecitas;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.nubetres{
+   background-image: url("img/nube3.png") ;
+    position: absolute;
+    width: 2402px;
+  height: 1351px;
+  background-position: center no-repeat;
+  animation-name: nubecitas;
+  animation-delay: : 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.nubecuatro{
+   background-image: url("img/puntos.png") ;
+    position: absolute;
+   width: 2402px;
+  height: 1351px;
+  background-position: center no-repeat;
+  animation-name: nubecitas;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.tri{
+  width: 100%;
+  background-color: pink;
+  position: relative;
+
+}
+.tri .nube{
+background-image: url(img/triangulo.png);
+background-position: center no-repeat;
+top: -210px;
+opacity: .5;
+  right: 0;
+position: absolute;
+z-index: 2;
+}
+.tri .nubedos{
+background-image: url(img/triangulo2.png);
+background-position: center no-repeat;
+top: -260px;
+opacity: .8;
+right: 0;
+position: absolute;
+z-index: 2;
+}
+.tri .nubetres{
+background-image: url(img/triangulo3.png);
+background-position: center no-repeat;
+top: -280px;
+opacity: 1;
+right: 0;
+position: absolute;
+z-index: 2;
+
+}
+
+
+#menuToggle
+{
+  display: none;
+  position: relative;
+  top: 5px;
+  right: 2%;
+  width: 5%;
+  z-index: 5;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+ top: -40px;
+ left: 5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 6; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1000;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #0dab76;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 106vw;
+  height: 50vh;
+  margin:  0;
+  top: -20px;
+  padding-bottom: 50px;
+  right: -100px;
+  background: #ccc;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li a
+{
+display: block;
+margin-right: auto;
+margin-left: auto;
+ text-align: center;
+  color: #000;
+  list-style-type: none;
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menu li a:active{
+  color:green;
+  font-weight: bold;
+
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+
+
+
+@keyframes nave{
+   0%{
+    transform: translate(0);
+  
+  }
+
+ 
+  100%{
+    transform:  translateX(15px) translateY(15px); }
+
+}
+
+
+/*DESKTOP GRID*/
+.lg-col-1{
+    width: 8,333333333333333%;
+}
+.lg-col-2{
+    width: 16,6666666666666%;
+}
+.lg-col-3{
+    width: 25%;
+}
+.lg-col-4{
+    width: 33.3333333333%;
+}
+.lg-col-5{
+    width: 41.6666666667%;
+}
+.lg-col-6{
+    width: 50%;
+}
+.lg-col-7{
+    width: 58.3333333333%;
+}
+.lg-col-8{
+    width: 66.6666666667%;
+}
+.lg-col-9{
+    width: 75%;
+}
+.lg-col-10{
+    width: 83.3333333333%;
+}
+.lg-col-11{
+    width: 91.6666666667%;
+}
+.lg-col-12{
+    width: 100%;
+   } 
+
+  
+@media (max-width: 1400px) {
+    .algunos {
+      flex-wrap: wrap;
+    }
+  .algunos .a{
+width: 100%;
+height: 40vh}
+
+.algunos .b{
+  width: 48%;
+  height: 40vh
+}
+
+
+.hero-tres{
+   font-size:3vh;
+}
+
+
+/*MEDIUM GRID*/
+.md-col-1{
+    width: 8,333333333333333%;
+}
+.md-col-2{
+    width: 16,6666666666666%;
+}
+.md-col-3{
+    width: 25%;
+}
+.md-col-4{
+    width: 33.3333333333%;
+}
+.md-col-5{
+    width: 41.6666666667%;
+}
+.md-col-6{
+    width: 50%;
+}
+.md-col-7{
+    width: 58.3333333333%;
+}
+.md-col-8{
+    width: 66.6666666667%;
+}
+.md-col-9{
+    width: 75%;
+}
+.md-col-10{
+    width: 83.3333333333%;
+}
+.md-col-11{
+    width: 91.6666666667%;
+}
+.md-col-12{
+    width: 100%;
+   } 
+}
+
+@media (max-width: 910px){
+
+#menuToggle{
+  display: block;}
+
+  .list-serv{
+    display: none;
+  }
+  .box-text{
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.hero-sub{
+  max-width: 100%;
+  font-size: 2.5vh;
+}
+.nave{
+  width: 100%;
+
+}
+.clouduno, .clouddos, .cloudtres{
+  width: 450px;
+  height: 450px;
+}
+.back-inicio{
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+.back-inicio .form-inline{
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
+  padding: 0;
+}
+
+}
+
+
+@media (max-width: 740px){
+.algunos{
+overflow-x: auto;
+flex-wrap: nowrap;
+  
+}
+.algunos .b{
+  width: 90%;
+  flex: 0 0 auto;
+  margin-left: 15px;
+}
+.algunos .a{
+  width: 90%;
+  flex: 0 0 auto;
+}
+
+
+/*SMALL GRID*/
+.sm-col-1{
+    width: 8,333333333333333%;
+}
+.sm-col-2{
+    width: 16,6666666666666%;
+}
+.sm-col-3{
+    width: 25%;
+}
+.sm-col-4{
+    width: 33.3333333333%;
+}
+.sm-col-5{
+    width: 41.6666666667%;
+}
+.sm-col-6{
+    width: 50%;
+}
+.sm-col-7{
+    width: 58.3333333333%;
+}
+.sm-col-8{
+    width: 66.6666666667%;
+}
+.sm-col-9{
+    width: 75%;
+}
+.sm-col-10{
+    width: 83.3333333333%;
+}
+.sm-col-11{
+    width: 91.6666666667%;
+}
+.sm-col-12{
+    width: 100%;
+   } 
+
+
+}
