@@ -18,10 +18,10 @@
    <style amp-custom><?php readfile( getcwd() . "/style.css"); ?></style>
   </head>
   <body>
-  <div class="back1">
+<div class="back1">
     <nav class="menu lg-col-9 md-col-11">
       <amp-img src="img/logo-web.png" height="50" width="133" layout="responsive"></amp-img>
-<nav role="navigation">
+    <nav role="navigation">
     <div id="menuToggle">
         <input type="checkbox" />
     
@@ -30,26 +30,25 @@
         <span></span>
  
         <ul id="menu">
-          <li><a href="#">Inicio</a>
+          <li><a href="index.php">Inicio</a>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#">Planes</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
     </div>
 </nav>
 
 
       <ul class="list-serv">
-        <li><a href="#">Inicio</a></li>
+        <li><a href="index.php">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#">Planes</a></li>
-          <li><a href="#">Blog</a></li>
-        <li><a href="#">Contacto</a></li>
+  
+        <li><a href="#contacto">Contacto</a></li>
       
       </ul>
 
     </nav>
+
+
 <div class="back-inicio lg-col-9 md-col-11">
     
    <div class="box-text" amp-fx="fade-in">
@@ -65,65 +64,90 @@
    
     <div submit-success>
       <template type="amp-mustache">
-       Thank you! Now, check your email
+        Gracias, ahora revisa tu correo
       </template>
     </div>
     <div submit-error>
       <template type="amp-mustache">
-      Thank you! Now, check your email
+       Gracias, ahora revisa tu correo
       </template>
     </div>
   </form>
 </div>
   </div>
   
+
+
   <div class="nave">
     <div class="clouduno"></div>
     <div class="clouddos"></div>
     <div class="cloudtres"></div> 
     <div class="naveimg"><amp-img amp-fx="parallax" data-parallax-factor="1.3" width="950" height="950" layout="responsive"src="img/nave.png"></amp-img></div>
   </div>
+</div>
+</div>
 
-</div>
-</div>
 <div class="tri"  amp-fx="parallax" data-parallax-factor="1.15" >
-  
-  <div class="nubetres"></div>
-  <div class="nube"></div>
+  <div class="nubetres"></div>  
 <div class="nubedos"></div>
+</div> 
 
-
+<!--VALORES -->
+<div class="algunos lg-col-9 md-col-11">
+  <div class="box b"> </div>
+  <div class="box b"> </div>
+  <div class="box b"> </div>
 </div>
-<div class="more">
-  
+
+
+<!--SERVICIOS -->
+<div class="algunos lg-col-9 md-col-11" id="servicios">
+<a href="#" class="box a"><amp-img src="img/icono.png" height="350" width="350" layout="responsive"></amp-img><h2>Diseño de páginas web</h2> </a>
+<a href="#" class="box b"><amp-img src="img/icono2.png" height="250" width="250" layout="responsive"></amp-img><h2>Diseño para redes sociales</h2></a>
+<a href="#" class="box b"><amp-img src="img/icono3.png" height="250" width="250" layout="responsive"></amp-img><h2>Estrategia SEO</h2></a>
+</div>
+
+
+<!--
+
 <div class="olas"></div>
     <div class="espacio"></div>
     <div class="espacio2"></div> 
     <div class="espacio3"></div>
     <p class="hero-tres lg-col-5 md-col-11" amp-fx="fade-in">El mejor momento para emprender es ahora</p>
 </div>
+-->
 
 
+<div class="contacto lg-col-5 md-col-11" id="contacto">
 
-<div class="algunos lg-col-9 md-col-11" id="servicios">
-<a href="#" class="box a"><amp-img src="img/web-icon.png" height="350" width="350" layout="responsive"></amp-img><h1>Diseño de páginas web</h1> </a>
-<a href="#" class="box b"><amp-img src="img/icono2.png" height="250" width="250" layout="responsive"></amp-img><h2>Diseño para redes sociales</h2></a>
-<a href="#" class="box b"><amp-img src="img/icono3.png" height="250" width="250" layout="responsive"></amp-img><h2>Estrategia SEO</h2></a>
-</div>
-
-
-<div class="more">
-  
-<div class="estrellas"></div>
-   <div class="nubecuatro"></div> 
-<!--    <div class="nubedos"></div> 
-    <div class="nubetres"></div>
+<form class="form-contacto" action-xhr="#" method="post" target="_top">
+  <input type="text" name="nombre" placeholder="Nombre" required>
+  <label for="email"></label>
+  <input type="email"  placeholder="Correo" required>
+  <input type="phone" name="telefono" placeholder="Telefono" required>
+  <textarea name="mensaje" placeholder="mensaje"> </textarea><br>
+  <button type="submit" class="enviar">Iniciar</button>
    
-      <div class="nube"></div>-->
-    <p amp-fx="fade-in" class="hero-tres lg-col-5 md-col-11">"Si tu negocio no está en internet, tu negocio no existe" 
-      -Bill Gates
-    </p>
+    <div submit-success>
+      <template type="amp-mustache">
+      Gracias, ahora revisa tu correo
+      </template>
+    </div>
+    <div submit-error>
+      <template type="amp-mustache">
+      Gracias, ahora revisa tu correo
+      </template>
+    </div>
+  </form>
+
 </div>
+
+
+
+
+
+
 
 <footer></footer>
   </body>

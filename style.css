@@ -10,7 +10,7 @@ a{
   text-decoration: none;
 }
 body{
-   background-image: linear-gradient(-55deg, #8e2de2 0%, #190725 30%,  #000000 100%);  
+   background-image: linear-gradient(-55deg, #3b1156 0%, #190725 30%,  #000000 100%);  
   font-family: 'Open Sans';
 
 }
@@ -38,11 +38,149 @@ height: 50px;
  flex-wrap: wrap;
  height: 55px;
  margin-left: auto;
- z-index: 100;
+ z-index: 1500;
  margin-right: auto;
- 
+ }
+
+
+#menuToggle
+{
+  display: none;
+  position: relative;
+  top: 5px;
+  right: 2%;
+  width: 5%;
+  z-index: 5;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+ top: -40px;
+ left: 5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 150; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1000;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
 
 }
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #0dab76;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 110vw;
+  height: 100vh;
+  margin:  0;
+  top: -20px;
+  padding-bottom: 50px;
+  right: -100px;
+  
+  background: #3b1156;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li a
+{
+display: block;
+margin-right: auto;
+margin-left: auto;
+ text-align: center;
+ position: relative;
+  color: #fff;
+  font-weight: bold;
+  list-style-type: none;
+letter-spacing: 2px;
+  font-size: 5vh;
+  line-height: 1.7;
+  top:35px;
+}
+#menu li a:active{
+  color:green;
+  font-weight: bold;
+
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+
+
 
 
 .back-inicio{
@@ -60,8 +198,9 @@ height: 50px;
 
    background-image: url(img/morado.png);
  background-position: center no-repeat;
-  height: 105vh;
+ 
 }
+
 
 .hero-text{
   font-family: 'Roboto Slab';
@@ -75,7 +214,7 @@ height: 50px;
 }
 .box-text{
   width: 55%;
-  z-index: 100;
+  z-index: 1;
 }
 
 .box{
@@ -85,6 +224,7 @@ height: 50px;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  
 }
 
 .box h1, .box h2{
@@ -93,15 +233,14 @@ margin-top: 15px;
 font-weight: bold;
 font-size: 32px;
 text-align: center;
-position: absolute;
-left: 0;
-bottom: 5px;
-}
-.box h1{
 
+display: block;
+margin-right: auto;
+margin-left: auto;
 }
+
 .box amp-img{
- width: 350px;
+ width: 250px;
 }
 .hero-sub{
   max-width: 75%;
@@ -122,7 +261,7 @@ bottom: 5px;
   width: 45%;
   animation: 5s nave;
   position: relative;
-  z-index: 3;
+ 
 
 }
 
@@ -221,6 +360,8 @@ width: 48%;}
 .algunos .b{
   width: 23%;
 }
+
+
 footer{
   width: 100%;
   height: 150px;
@@ -252,6 +393,45 @@ border: none;
 .form-inline{
   display: flex;
 }
+
+.contacto .form-contacto input{
+  margin-top: 15px;
+  width: 98%;
+  border: 2px solid #ccc;
+  padding: 12px 20px;
+  box-sizing: border-box;
+   background-color: #ffffff;
+ border-radius: 11px;
+}
+.contacto .form-contacto textarea{
+  margin-top: 15px;
+  width: 98%;
+  border: 2px solid #ccc;
+  padding: 12px 20px;
+  box-sizing: border-box;
+   background-color: #ffffff;
+ border-radius: 11px;
+}
+ .contacto .form-contacto input[type=email] {
+  box-shadow: none;
+ }
+
+.contacto{
+  padding-top: 20px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+ border-radius: 25px;
+ height: 450px;
+ margin-bottom: 155px;
+}
+.contacto .form-contacto{
+text-align: center;
+
+}
+
 
 
 .estrellas{
@@ -343,138 +523,6 @@ position: absolute;
 z-index: 2;
 
 }
-
-
-#menuToggle
-{
-  display: none;
-  position: relative;
-  top: 5px;
-  right: 2%;
-  width: 5%;
-  z-index: 5;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle input
-{
-  display: block;
-  width: 200px;
-  height: 100px;
-  position: absolute;
- top: -40px;
- left: 5px;
-  cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 6; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #fff;
-  border-radius: 3px;
-  z-index: 1000;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #0dab76;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 106vw;
-  height: 50vh;
-  margin:  0;
-  top: -20px;
-  padding-bottom: 50px;
-  right: -100px;
-  background: #ccc;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  transform-origin: 0% 0%;
-  transform: translate(100%);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li a
-{
-display: block;
-margin-right: auto;
-margin-left: auto;
- text-align: center;
-  color: #000;
-  list-style-type: none;
-  padding: 10px 0;
-  font-size: 22px;
-}
-#menu li a:active{
-  color:green;
-  font-weight: bold;
-
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
 
 
 
