@@ -1,0 +1,249 @@
+/*
+Theme Name: B612 Digital
+Theme URI: https://www.b612digital.com
+Author: B612 Digital
+Author URI: https://www.b612digital.com
+Description: Plantilla para proyecto digital B612
+Version: 1.0
+*/
+        
+:root {
+     --azul: #102951;
+     --cielo: #ABFFD5;
+    --sombra:  0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ * {
+     padding: 0;
+     margin: 0;
+     font-family: 'Open Sans';
+ }
+a{
+    text-decoration: none;
+    color: #fff;
+}
+li{
+    list-style: none;
+}
+
+ .col-1 {
+     width: 8.33%;
+ }
+
+ .col-2 {
+     width: 16.66%;
+ }
+
+ .col-3 {
+     width: 25%;
+ }
+
+ .col-4 {
+     width: 33.33%;
+ }
+
+ .col-5 {
+     width: 41.66%;
+ }
+
+ .col-6 {
+     width: 50%;
+ }
+
+ .col-7 {
+     width: 58.33%;
+ }
+
+ .col-8 {
+     width: 66.66%;
+ }
+
+ .col-9 {
+     width: 75%;
+ }
+
+ .col-10 {
+     width: 83.33%;
+ }
+
+ .col-11 {
+     width: 91.66%;
+ }
+
+ .col-12 {
+     width: 100%;
+ }
+
+
+body {
+     background-color: #fff;
+    
+ }
+.center{
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/*MENU GENERAL*/
+header{
+    height: 50px;
+    box-shadow: var(--sombra);
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+}
+
+.menu{
+    height: 50px; 
+}
+.menu .img{
+    width: 156px;
+}
+/*MENU DESK*/
+.menu-list li{
+    display: inline-block;
+}
+.menu-list li a{
+    color: var(--azul);
+    font-family: 'Roboto Slab';
+    font-size: 24px;
+    padding-left: 15px;
+}
+.menu-list li a:hover{
+    border-bottom: 3px solid var(--cielo);
+    transition: 0.2s;
+}
+
+/*MENU CELULAR*/
+.hamburger{
+    display: none;
+}
+.hamburger amp-img{
+    width: 50px;
+}
+
+.full{
+    height: 100vh;
+    background-color: var(--azul);
+}
+
+
+/*HEADER*/
+.back-1{
+    background-image: url(img/fondo-b612-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 130vh;
+}
+.back-2{
+    background-image: url(img/fondo-b612-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 130vh;
+
+}
+.back-3{
+    background-image: url(img/fondo-b612-3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 130vh;
+
+}
+
+.box-head{
+    min-height: 100vh;
+}
+
+.img-head{
+    width: 45%;
+}
+.img-head{
+    max-width: 983px;
+}
+.box-head .texto-head{
+    width: 50%;
+}
+
+.box-head .texto-head h2{
+    font-family: 'Roboto Slab';
+    color: var(--cielo);
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.box-head .texto-head h3{
+    font-family: 'Open Sans';
+    color:#fff;
+    padding-top: 10px;
+    padding-bottom:20px;
+    font-size: 21px;
+}
+
+.box-head .texto-head .btn-head{
+    width: 40%;
+    padding: 8px 10px;
+    background-color: var(--cielo);
+    box-shadow: var(--sombra);
+    text-align: center;
+    border-radius: 25px;
+    color: var(--azul);
+}
+.back-4{
+    min-height: 100vh;
+    margin-top: -550px;
+    background-color: antiquewhite;
+}
+
+.serv{
+    width: 22%;
+    height: 445px;
+    border-radius: 35px;
+    border: 1px solid black;
+    padding: 8px;
+    background-image: url(https://www.b612digital.com/img/fondo.png);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+}
+.serv .descri{ 
+     color: #fff;
+    position: absolute;
+    left: 15px;
+    bottom: 65px;}
+.serv h2{
+    font-family: 'Roboto Slab';
+    font-size: 24px;
+}
+.serv .descri p{
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+
+/*CELULAR*/
+
+@media only screen and (max-width: 750px){
+.hamburger{
+    display: block;
+} 
+.menu-list{
+    display:none;
+}
+    
+}
